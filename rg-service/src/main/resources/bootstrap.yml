@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: rg-service
+  cloud:
+    config:
+      #uri: http://localhost:8888
+      fail-fast: true
+      username: user
+      password: password
+      #password: ${CONFIG_SERVICE_PASSWORD}

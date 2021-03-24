@@ -1,0 +1,15 @@
+HOST_ADDRESS: localhost
+DB_ADDRESS: localhost
+USERNAME:
+PASSWORD:
+
+logging:
+ level:
+   org.springframework.security: DEBUG
+
+feign:
+  client:
+    config:
+      default:
+        connect-timeout: 160000000
+        read-timeout: 160000000

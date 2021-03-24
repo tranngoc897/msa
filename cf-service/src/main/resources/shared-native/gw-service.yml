@@ -1,0 +1,31 @@
+server:
+  port: 8080
+spring:
+  servlet:
+    multipart:
+      max-file-size: 18MB
+      max-request-size: 18MB
+zuul:
+  prefix: /ibss
+  ignoredServices: '*'
+  sensitiveHeaders: Cookie,Set-Cookie
+  host:
+    connect-timeout-millis: 2000000
+    socket-timeout-millis:  2000000
+
+  routes:
+    au-service:
+      serviceId: au-service
+      path: /uaa/**
+      url: http://localhost:5000
+      stripPrefix: false
+
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    service-url:
+      #default-zone: http://user:password@${HOST_ADDRESS}:8761/eureka
+      default-zone: http://${HOST_ADDRESS}:8761/eureka
+    fetchRegistry: true
+

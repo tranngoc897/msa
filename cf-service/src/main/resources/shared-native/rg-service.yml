@@ -1,0 +1,16 @@
+server:
+  port: 8761
+
+spring:
+  security:
+    basic:
+      enabled: true
+    user:
+      name: user
+      password: password
+
+eureka:
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+
